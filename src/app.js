@@ -49,15 +49,16 @@ function checkZip(){
   const zipPattern = /^\d{5}(?:[-\s]\d{4})?$/;
   const zipValue = zip.value;
 
-  if(zipValue === 0){
-    zip.setCustomValidity('empty!');
-  }
-
   if (zipPattern.test(zipValue)){
     zip.setCustomValidity('');
   }
   else{
-    zip.setCustomValidity('zip format should be 12345 or 12345-6789');
+    if(zipValue === ''){
+      zip.setCustomValidity('empty!');
+    }
+    else{
+      zip.setCustomValidity('zip format should be 12345 or 12345-6789');
+    }
   }
 }
 
