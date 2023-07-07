@@ -1,0 +1,11 @@
+input:invalid {
+    border-color: #900;
+    background-color: #fdd;
+  }
+
+  input:valid {
+    border-color: green;
+    background-color: green;
+  }
+  
+  
